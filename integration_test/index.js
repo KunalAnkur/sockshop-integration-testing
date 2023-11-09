@@ -80,7 +80,6 @@ test('Catalogue Service Integration Test - Get Item by id', async (t) => {
         const response = await axios.get(`${baseURL}/catalogue/${catalogueID}`);
         t.equal(response.status, 200, 'HTTP status code should be 200');
         const responseBody = response.data;
-        console.log(typeof responseBody.count)
         t.equal(responseBody.id, catalogueID, `id should be a ${catalogueID}`);
         t.equal(typeof responseBody.name, 'string', 'name should be a string');
         t.equal(typeof responseBody.description, 'string', 'description should be a string');
